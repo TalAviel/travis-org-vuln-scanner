@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const axios = require('axios');
 const fs = require('fs');
 const yargs = require('yargs/yargs');
@@ -23,6 +25,7 @@ const argv = yargs(hideBin(process.argv))
         description: 'Github token. Unless you have a very small number of repositories, required in order to increase githubs rate limit'
     })
     .demandOption(['token', 'org'])
+    .usage('Helper to scan an organization in Travis to find potentially vulnerable repositories from Sept 2021 incident. Provide token and org to scan your organization using Travis APIs. Only repos which had Travis builds and have environment variables in Travis will be returned. Provide also the boolean extended and github_token in order to refine the search to include only repos which have forks and also get a nice summary which include the repo name and information about the top 3 contributors')
     .help()
     .argv;
 
