@@ -21,7 +21,7 @@ async function getGHRepo(slug) {
 async function getTopContributorsDetails(url, limit) {
     const contributors = await client.get(url);
     let users = [];
-    for (let i = 0; i < limit; ++i) {
+    for (let i = 0; i < limit && i < contributors.data.length; ++i) {
         const user = await client.get(contributors.data[i].url);
         users.push(user.data);
     }
