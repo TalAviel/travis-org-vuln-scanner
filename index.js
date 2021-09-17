@@ -54,6 +54,7 @@ async function getOrgRepos(org) {
         let result = await client.get(nextUrl);
         nextUrl = result.data['@pagination'].next && result.data['@pagination'].next['@href'];
         repos.push(...result.data.repositories);
+        break;
     } while (nextUrl);
 
     return repos;

@@ -1,6 +1,6 @@
 {
   "name": "travis-org-vuln-scanner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper to scan an organization in Travis to find potentially vulnerable repositories from Sept 2021 incident",
   "main": "index.js",
   "keywords": [
