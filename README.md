@@ -50,12 +50,18 @@ Options:
 
 You can clone it and run it locally by -
 
-```
+```bash
 node index travis-org-vuln-scanner -t TRAVIS_TOKEN -o ORGANIZATION_NAME --extended --github_token GITHUB_TOKEN
 ```
 
 OR by just using NPX
 
-```
+```bash
 npx travis-org-vuln-scanner -t TRAVIS_TOKEN -o ORGANIZATION_NAME --extended --github_token GITHUB_TOKEN
+```
+
+To ensure you're using the latest version, you can add `--ignore-existing` to the `npx` command, e.g. -
+
+```bash
+npx --ignore-existing travis-org-vuln-scanner -t TRAVIS_TOKEN -o ORGANIZATION_NAME --extended --github_token GITHUB_TOKEN
 ```
