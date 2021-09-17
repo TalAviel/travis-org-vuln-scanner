@@ -1,6 +1,6 @@
 {
   "name": "travis-org-vuln-scanner",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Helper to scan an organization in Travis to find potentially vulnerable repositories from Sept 2021 incident",
   "main": "index.js",
   "keywords": [
@@ -9,8 +9,8 @@
     "vulnerabilties"
   ],
   "bin": "./index.js",
-  "author": "",
-  "license": "ISC",
+  "author": "Tal Aviel",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.4",
     "yargs": "^17.1.1"
